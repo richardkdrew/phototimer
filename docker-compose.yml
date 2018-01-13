@@ -4,8 +4,8 @@ services:
   capture:
     build:
       context: .
-      image: phototimer
-      container_name: phototimer
+    image: phototimer
+    container_name: phototimer
     environment:
       - TZ="Pacific/Auckland"
     volumes:

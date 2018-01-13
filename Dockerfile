@@ -1,6 +1,6 @@
 FROM alexellis2/raspistill:latest
 
-RUN RUN apt-get update -qy \
+RUN apt-get update -qy \
   && apt-get upgrade -qy \
   && apt-get install -qy python \
   && apt-get autoremove

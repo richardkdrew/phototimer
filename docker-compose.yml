@@ -1,0 +1,16 @@
+version: "3.3"
+
+services:
+  capture:
+    build:
+      context: .
+      image: phototimer
+      container_name: phototimer
+    environment:
+      - TZ="Pacific/Auckland"
+    volumes:
+      - /var/image:/var/image
+      - ./config.py:./config.py:ro
+    restart: unless-stopped
+    labels:
+      org.label-schema.group: "timelapse-photography"

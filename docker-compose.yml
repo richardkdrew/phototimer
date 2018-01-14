@@ -4,14 +4,11 @@ services:
   capture:
     build:
       context: .
-    image: phototimer
-    container_name: phototimer
+    image: richardkdrew/phototimer
     environment:
-      - TZ="Pacific/Auckland"
+      - TZ=Pacific/Auckland
     volumes:
       - /var/image:/var/image
       - ./config.py:/root/images/config.py:ro
     restart: unless-stopped
     privileged: true
-    labels:
-      org.label-schema.group: "phototimer"

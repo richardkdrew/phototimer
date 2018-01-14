@@ -10,7 +10,7 @@ services:
       - TZ="Pacific/Auckland"
     volumes:
       - /var/image:/var/image
-      - ./config.py:./config.py:ro
+      - ./config.py:/root/images/config.py:ro
     restart: unless-stopped
     labels:
-      org.label-schema.group: "timelapse-photography"
+      org.label-schema.group: "phototimer"

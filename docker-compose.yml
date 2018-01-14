@@ -12,5 +12,6 @@ services:
       - /var/image:/var/image
       - ./config.py:/root/images/config.py:ro
     restart: unless-stopped
+    privileged: true
     labels:
       org.label-schema.group: "phototimer"

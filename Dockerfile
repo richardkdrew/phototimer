@@ -5,7 +5,7 @@ RUN apt-get update -qy \
 
 COPY . .
 
-VOLUME [ "/var/image/", "./config.py" ]
+VOLUME /var/image/
 
 ENTRYPOINT []
 CMD ["python", "take.py", "60"]
